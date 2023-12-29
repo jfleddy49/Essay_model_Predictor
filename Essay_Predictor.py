@@ -46,6 +46,4 @@ def run_flask_app():
 
 if __name__ == '__main__':
     port = 5000
-    url = f'http://127.0.0.1:{port}/'
     run_flask_app()
-    webbrowser.open(url=url)
