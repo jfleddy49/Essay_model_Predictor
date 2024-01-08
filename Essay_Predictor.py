@@ -1,49 +1,34 @@
 
-import pickle
-from functions_for_project import pattern, add_feat, add_metrics, remove_abstract, get_unique_info, df_maker, make_matrix
+from functions_for_project import df_maker, make_matrix, model, vec 
 
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 import os
-import webbrowser
-from threading import Timer
-import threading
-import time
-import subprocess
-
-script_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(script_dir, 'Classifier_essay.pkl')
-vectorizer_path = os.path.join(script_dir, 'Vectorizer_final_essay.pkl')
-
-with open(model_path, 'rb') as model_file:
-    model = pickle.load(model_file)
-with open(vectorizer_path, 'rb') as vec_file:
-    vec = pickle.load(vec_file)
-
-script_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(script_dir, 'Classifier.pkl')
 
 app = Flask(__name__)
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('testing_index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    essay_text = request.form['essay_text']
+    essay_text = request.form.get('essay_text', ' ')
+    if not essay_text.strip():
+        return redirect(url_for('index'))
     df = df_maker(essay_text)
     matrix = make_matrix(df, vec)
-    # Use your machine learning model to make predictions
     prediction = model.predict(matrix)[0]
     if prediction:
         prediction = "AI Generated"
     else:
         prediction = 'Human Written'
-    return render_template('result.html', prediction=prediction)
+    return render_template('testing_result.html', prediction=prediction)
 
+@app.route('/return', methods = ['POST'])
+def go_back():
+    return redirect(url_for('index'))
 
 def run_flask_app():
-    app.run(debug=True, extra_files=['static/styles.css'], use_reloader=True, port=5000, use_evalex=True, use_debugger=True)
+    app.run(debug=True)
 
 if __name__ == '__main__':
-    port = 5000
     run_flask_app()

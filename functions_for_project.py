@@ -21,6 +21,7 @@ from scipy.sparse import hstack, csr_matrix
 from sklearn.neural_network import MLPClassifier
 import textstat
 import pickle
+import os
 
 
 
@@ -128,5 +129,15 @@ def make_matrix(df, vectorizer):
   for i in range(1, df.shape[1]):
     matrix = hstack([matrix, csr_matrix(df.iloc[:, i]).reshape(-1,1)])
   return matrix
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(script_dir, 'Classifier_essay.pkl')
+vectorizer_path = os.path.join(script_dir, 'Vectorizer_final_essay.pkl')
+
+with open(model_path, 'rb') as model_file:
+    model = pickle.load(model_file)
+with open(vectorizer_path, 'rb') as vec_file:
+    vec = pickle.load(vec_file)
+
 
 

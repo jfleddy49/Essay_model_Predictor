@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Essay Detection</title>
+    <link rel="stylesheet" type="text/css" href="static/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div>
+    <div class="Base_Container">
+      <div id="Heading" class="Heading_Container">
+        <h1 class="Heading_Text">AI Essay Predictor</h1>
+      </div>
+      <div id="Infomation" class="side_container">
+        <span class="side_text">
+          <span>
+            Model built using Sklearn Neutral Network. Features including TD-IDF
+            Matrix, Word Embedding Vectors, Functions of Sentence Length,
+            Type-Token Ratio, and Yules&apos;s K
+          </span>
+          <br />
+          <br />
+          <br />
+          <span>To read more, see the full process here:</span>
+          <br />
+          <span>Insert Link Here</span>
+          <br />
+        </span>
+      </div>
+      <div id="Footing" class="Footing_container"></div>
+      <div class="Essay_Container">
+        <form
+          action="/predict"
+          method="post"
+          class="main_form"
+        >
+          <input type="submit" value = "Predict" class="Predict_button">
+          <textarea
+            id = "essay_text"
+            name = "essay_text"
+            placeholder="Enter Essay Here"
+            class="Essay_area"
+          ></textarea>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
