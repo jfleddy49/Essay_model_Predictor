@@ -1,0 +1,131 @@
+.Base_Container {
+  width: 100vw;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #D9D9D9;
+}
+.Heading_Container {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 12.5vh;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: var(--dl-color-gray-black);
+  border-width: 4px;
+  justify-content: center;
+  background-image: linear-gradient(45deg, rgb(189, 195, 199) 0.00%,rgb(24, 99, 174) 100.00%);
+}
+.Heading_Text {
+  top: auto;
+  left: auto;
+  color: rgb(14, 14, 14);
+  width: auto;
+  margin: auto;
+  position: absolute;
+  align-self: center;
+  margin-top: auto;
+  margin-left: 0px;
+  margin-right: auto;
+  padding-left: var(--dl-space-space-sixunits);
+  margin-bottom: auto;
+  padding-right: var(--dl-space-space-sixunits);
+}
+.side_container {
+  width: 18vw;
+  height: 77.5vh;
+  display: flex;
+  position: relative;
+  align-self: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #f3efef;
+}
+.side_text {
+  top: var(--dl-space-space-sixunits);
+  left: 0px;
+  position: absolute;
+  font-family: sans-serif;
+  line-height: 2;
+}
+.Footing_container {
+  flex: 0 0 auto;
+  width: 100%;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 10vh;
+  display: flex;
+  align-items: flex-start;
+  background-image: linear-gradient(270deg, rgb(189, 195, 199) 0.00%,rgb(24, 99, 174) 100.00%);
+}
+.Essay_Container {
+  top: 20vh;
+  flex: 0 0 auto;
+  left: 40vw;
+  width: 40vw;
+  height: 60vh;
+  display: flex;
+  position: absolute;
+  box-shadow: 5px 5px 7px 0px #0c0c0c;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #f5f1f1;
+}
+.Test_container {
+  top: 20vh;
+  flex: 0 0 auto;
+  left: 40vw;
+  width: 40vw;
+  height: 60vh;
+  display: flex;
+  position: absolute;
+  box-shadow: 5px 5px 7px 0px #0c0c0c;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #f5f1f1;
+}
+.Prediction_text {
+  position: relative;
+  font-size: x-large;
+  top: 10%;
+  align-self: center;
+}
+.main_form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.Return_button {
+  left: 0px;
+  width: 100%;
+  bottom: 45px;
+  height: 71px;
+  position: absolute;
+  align-self: flex-end;
+  transition: 0.3s;
+  background-color: rgb(172, 247, 193);
+}
+.Predict_button {
+  left: 0px;
+  width: 100%;
+  bottom: 45px;
+  height: 71px;
+  position: absolute;
+  align-self: flex-end;
+  transition: 0.3s;
+  background-color: rgb(172, 247, 193);
+}
+
+.Predict_button:active {
+  opacity: 0.5;
+}
+.Predict_button:hover {
+  cursor: pointer;
+}
+.Essay_area {
+  width: 100%;
+  height: 70%;
+}
