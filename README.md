@@ -4,32 +4,21 @@ This project uses data sets found on Kaggle and Git Hub containing various writt
 
 ## Getting Started
 
-Download all of the files. The Classifer and Vectorizer are the largest files. One all files are downloaded, run the Essay_Predictor.py in the same d
+Download all of the files. The Classifer and Vectorizer are the largest files. One all files are downloaded, run the Essay_Predictor.py. It will provide a link for the Flask web serve. Click on it and the application page will open. Enter in the desired essay and it will return the predicted results. 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You will need the following:
+- Python 3.9
+- Flask 3.0
+- nltk 3.8.1
+- Pandas 2.1.4
+- textstat 0.7.3
+- Sklearn 1.3.2
+- pip 23.3.2 (Important)
 
-```
+### Breakdown of Model
 
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Data provided from self generated GPT essays, collections of LLM essays, and a corpus of Student Essays. 
 
 ## Running the tests
 
