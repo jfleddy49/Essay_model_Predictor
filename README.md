@@ -4,14 +4,13 @@ This project uses data sets found on Kaggle and Git Hub containing various writt
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
+Download all of the files. The Classifer and Vectorizer are the largest files. One all files are downloaded, run the Essay_Predictor.py in the same d
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+
 ```
 
 ### Installing
