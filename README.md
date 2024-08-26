@@ -1,4 +1,4 @@
-# Project Title
+# AI Essay Detector 
 
 This project uses data sets found on Kaggle and Git Hub containing various written and LLM generated essays. From these essays, we built a Neural Network using SKlearn to predict whether a given essay was AI generated or written with high accuracy. 
 
