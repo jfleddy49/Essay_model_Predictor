@@ -4,7 +4,7 @@ This project uses data sets found on Kaggle and Git Hub containing various writt
 
 ## Getting Started
 
-Download all of the files. The Classifer and Vectorizer are the largest files. One all files are downloaded, run the Essay_Predictor.py. It will provide a link for the Flask web serve. Click on it and the application page will open. Enter in the desired essay and it will return the predicted results. 
+Download all of the files. The Classifer and Vectorizer are the largest files. Once all files are downloaded, run the Essay_Predictor.py. It will provide a link for the Flask web serve. Click on it and the application page will open. Enter in the desired essay and it will return the predicted results. 
 ### Prerequisites
 
 You will need the following:
@@ -14,6 +14,7 @@ You will need the following:
 - Pandas 2.1.4
 - textstat 0.7.3
 - Sklearn 1.3.2
+- Gensim 4.3.3
 - pip 23.3.2 (Important)
 
 ### Breakdown of Model
